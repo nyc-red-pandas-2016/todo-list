@@ -1,0 +1,16 @@
+<div class="">
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end%>
+
+      <form class="" action="/lists/<%= @list.id %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="list[name]" value="<%= @list.name%>">
+        <input type="submit" name="name" value="Update">
+      </form>
+</div>
